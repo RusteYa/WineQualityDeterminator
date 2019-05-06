@@ -1,0 +1,46 @@
+{% extends "winequality/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block navbar %}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}">Домой</a></li>
+            <li><a href="{% url 'determinate' %}" class="active">Определить качество вина</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+    <!-- about -->
+    <div class="about">
+        <div class="about-info">
+            <div class="container">
+                <div class="col-md-1">
+                </div>
+
+                <div class="col-md-6">
+                    <form action="" method="POST" class="post-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-primary">Определить качество</button>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-md-1">
+                </div>
+
+                <div class="col-md-4">
+                    <h1>Пожалуйста, введите физикохимические показатели вашего вина</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //about -->
+{% endblock %}

@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Red Wine | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- bootstrap-css -->
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- //bootstrap-css -->
+<!-- css -->
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+<!-- //css -->
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"> </script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+</head>
+<body>
+
+    <!-- banner -->
+	<div class="banner">
+		<!-- header -->
+		<div class="header">
+			<!-- container -->
+			<div class="container">
+				<div class="logo">
+					<h1><a href="{% url 'home' %}">Wine <span>quality</span></a></h1>
+				</div>
+				<div class="top-nav">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
+							</button>
+						</div>
+
+                        {% block navbar %}
+                        {% endblock %}
+					</nav>
+				</div>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //header -->
+        {% block banner %}
+        {% endblock %}
+	</div>
+	<!-- banner -->
+
+    {% block content %}
+    {% endblock %}
+
+	<!-- footer-bottom -->
+	<div class="footer-bottom">
+		<!-- container -->
+		<div class="container">
+			<p> © 2019 Wine quality . Все права защищены </p>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- footer-bottom -->
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- content-Get-in-touch -->
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+</body>
+</html>

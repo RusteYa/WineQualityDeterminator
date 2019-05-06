@@ -1,0 +1,1 @@
+web: gunicorn WineQualityDeterminator.wsgi --log-file -

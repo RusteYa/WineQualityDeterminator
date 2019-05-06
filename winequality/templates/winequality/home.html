@@ -1,0 +1,57 @@
+{% extends "winequality/base.html" %}
+
+{% block navbar %}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}" class="active">Домой</a></li>
+            <li><a href="{% url 'determinate' %}">Определить качество вина</a></li>
+        </ul>
+        <div class="clearfix"> </div>
+    </div>
+{% endblock %}
+
+{% block banner %}
+    <!-- banner-grids -->
+    <div class="banner-grids">
+        <!-- container -->
+        <div class="container">
+            <div class="banner-top-grids">
+                <div class="top-grids">
+                    <a href="{% url 'determinate' %}" class="col-md-12 banner-grid">
+                        <div class="banner-left-grid blue">
+                            <div class="banner-left-icon">
+                                <div class="services-icon">
+                                    <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="banner-grid-info">
+                                <h3 class="text-center" style="margin-top:30px">Узнайте качество вашего вина по его химическим показателям!</h3>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </a>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //banner-grids -->
+{% endblock %}
+
+{% block content %}
+	<!-- welcome -->
+	<div class="welcome">
+		<!-- container -->
+		<div class="container">
+			<div class="welcome-info">
+				<h2>Добро пожаловать</h2>
+				<h5>На сайте вы можете узнать предполагаемое качество вашего вина по его физическим и химическим параметрам</h5>
+                <p>Пейте только хорошее вино</p>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- welcome -->
+{% endblock %}

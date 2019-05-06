@@ -1,0 +1,27 @@
+{% extends "winequality/base.html" %}
+
+{% block navbar %}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}">Домой</a></li>
+            <li><a href="{% url 'determinate' %}" class="active">Определить качество вина</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+    <!-- about -->
+    <div class="about" style="min-height: 73vh">
+        <div class="about-info">
+            <div class="container">
+                <h1>{{ result }}</h1>
+            </div>
+        </div>
+    </div>
+    <!-- //about -->
+{% endblock %}
