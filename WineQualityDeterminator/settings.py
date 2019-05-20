@@ -25,7 +25,7 @@ SECRET_KEY = '1=-8+hw1(ms++b#ul0(53q2s-3wn19=q2p71n1e)u%uuwsrb)d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wine-quality-determinator.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['drink-quality-determinator.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
